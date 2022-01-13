@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0dab364dabc2a1949814031541a62b79
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Blaster: {instanceID: 0}
+  - Bullet: {fileID: 4597178850940068537, guid: ccf664abd54b312429e3205838df9cb4, type: 3}
+  - MissileLaucherTransform: {instanceID: 0}
+  - Missile: {instanceID: 0}
+  - LockedShip: {instanceID: 0}
+  - lockedWidget: {instanceID: 0}
+  - GizmoLock: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
