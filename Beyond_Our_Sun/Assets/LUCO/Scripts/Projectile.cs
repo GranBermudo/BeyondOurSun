@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float Speed;
     public float Lifetime;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int layerNumber;
 
     // Update is called once per frame
     void Update()
@@ -25,7 +19,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 6)
+        if (other.gameObject.layer == layerNumber)
         {
             //collision.gameObject.GetComponent<Health>();
             Debug.Log(other.gameObject.name);

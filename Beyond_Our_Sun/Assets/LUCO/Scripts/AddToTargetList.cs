@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class AddToTargetList : MonoBehaviour
 {
-    private ShipBehaviour playerShipBehaviour;
+    private WeaponSystem playerShipBehaviour;
     [SerializeField] private MeshRenderer[] shipParts;
     private bool spotted = false;
 
     private void Awake()
     {
-        playerShipBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<ShipBehaviour>();
+        playerShipBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<WeaponSystem>();
     }
 
     private void Update()

@@ -38,7 +38,7 @@ public class Missile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 6)
+        if (other.gameObject.layer == 9)
         {
             //collision.gameObject.GetComponent<Health>();
             Debug.Log(other.gameObject.name + "hit by missile");
