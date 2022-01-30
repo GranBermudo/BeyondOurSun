@@ -1,0 +1,6 @@
+On utilise plus ShipBehaviour pour les controles du vaisseau mais PropellerShipBehavior, je l'ai laissé au cas ou mais bosse sur PropellerShipBehaviour.
+Néanmoins dans ShipBehaviour y a des trucs qui fonctionnait que j'ai pas réussi a refaire donc ça pourrait être bien de voir avec Bruno pourquoi, notamment pour le straff.
+
+Le AddToTargetList se met sur un ennemis et communique avec le script WeaponSystem.
+
+Il faudrait voir avec Bruno pour quelques trucs que j'ai indiqué dans les scripts et aussi pour un système de missions / objectifs.

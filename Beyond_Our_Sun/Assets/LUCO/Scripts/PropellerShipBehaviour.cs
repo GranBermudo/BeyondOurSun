@@ -15,7 +15,7 @@ public class PropellerShipBehaviour : MonoBehaviour
     public float maxSpeedStraffing;
     public float dragStraffing;
     public float maxBoostSpeed;
-    public float accelerationFactor;
+    public float accelerationFactor;    //a quel point le vaisseau accelere ou decelere vite
     public float RotationSpeed;
 
     private float CurrentSpeedStraffing = 0;
@@ -30,9 +30,9 @@ public class PropellerShipBehaviour : MonoBehaviour
         //Increase or decrease ship speed
         if (Input.GetAxis("LT") > 0 && Speed < maxSpeed)
         {
-            Speed += accelerationFactor * Time.deltaTime;
-        }
-        else if(Input.GetAxis("LT") < 0 && Speed > -maxSpeed)
+            Speed += accelerationFactor * Time.deltaTime;               //ici on augmente ou diminue la vitesse du vaisseau, elle redescend pas automatiquement mais
+        }                                                               //pour avoir une maniabilité plus insectoide ça serai bien que si et que ça s'arrête plutôt vite même
+        else if(Input.GetAxis("LT") < 0 && Speed > -maxSpeed)           //y avait un truc qui faisait ça dans ShipBehaviour regarde avec Brun au pire
         {
             Speed -= accelerationFactor * Time.deltaTime;
         }
@@ -42,15 +42,15 @@ public class PropellerShipBehaviour : MonoBehaviour
         {
             if (Speed < 7 && Speed > -7)
             {
-                Speed = 0;
+                Speed = 0;                                              //on remet la vitesse a zéro si elle est sous une certaine valeur et qu'on ne touche pas aux contrôles
             }
         }
 
 
         //increase or decrease vertical straffing speed
         /*
-        if (Input.GetAxis("RightStickVertical") > 0.1 && SpeedStraffing < maxSpeedStraffing)
-        {
+        if (Input.GetAxis("RightStickVertical") > 0.1 && SpeedStraffing < maxSpeedStraffing)                            //ici toute une partie sur le straffing qui fonctionnait pas comme je voulait mais 
+        {                                                                                                               //ça serai bien de l'implémenter, voir avec Bruno
             SpeedStraffing += (accelerationFactor * 2) * Time.deltaTime;
         }
         else if (Input.GetAxis("RightStickVertical") < -0.1 && SpeedStraffing > -maxSpeedStraffing)
@@ -70,22 +70,17 @@ public class PropellerShipBehaviour : MonoBehaviour
 
         Vector3 move = new Vector3();
 
-        /*
         //acceleration
-        acceleration = new Vector3(0, 0, Input.GetAxisRaw("LT"));
-        acceleration = acceleration.normalized * Time.deltaTime * Speed;
-        rb.AddRelativeForce(acceleration, ForceMode.Acceleration);
-        */
-
-        //acceleration
-        Vector3 acceleration = new Vector3(0, 0, Speed) * Time.deltaTime;
-        transform.Translate(acceleration);
-
+        Vector3 acceleration = new Vector3(0, 0, Speed) * Time.deltaTime;           //la partie qui fait avancer ou reculer le vaisseau, ça n'utilise pas la physique
+        transform.Translate(acceleration);                                          //avant c'était fait avec un AddForce mais je saurai pas dire pourquoi ça faisait drifter le vaisseau de fou
+                                                                                    //ça serai bien de le re physiquer pour utiliser le drag du rigidbody
         //straffing
         if (SpeedStraffing != 0)
         {
-            rb.AddRelativeForce(-Vector3.up * SpeedStraffing * Time.deltaTime);
-            CurrentSpeedStraffing += SpeedStraffing * Time.deltaTime;
+            //c'était sensé straffer avec de la physique d'ou le AddRelativeForce
+            //le drag du rigidbody aurai stoppé le straff
+            rb.AddRelativeForce(-Vector3.up * SpeedStraffing * Time.deltaTime);     //cette partie sert a rien pour l'instant vu qu'y a pas de straffing mais ouais a voir
+            CurrentSpeedStraffing += SpeedStraffing * Time.deltaTime;               //pour en mettre ça serai cool
         }
         else if(CurrentSpeedStraffing != 0)
         {
@@ -99,7 +94,7 @@ public class PropellerShipBehaviour : MonoBehaviour
         {
             Yrot = -1;
         }
-        else if (Input.GetButton("RB"))
+        else if (Input.GetButton("RB"))                                             //ici ça fait tourner le vaisseau
         {
             Yrot = 1;
         }
@@ -110,6 +105,6 @@ public class PropellerShipBehaviour : MonoBehaviour
 
         Vector3 rotate = new Vector3(-Input.GetAxis("LeftStickVertical"), Yrot, -Input.GetAxis("LeftStickHorizontal"));
         move = rotate.normalized * Time.deltaTime * (RotationSpeed * 10);
-        rb.AddRelativeTorque(move);
+        rb.AddRelativeTorque(move);     //la rotation est physiquée
     }
 }
