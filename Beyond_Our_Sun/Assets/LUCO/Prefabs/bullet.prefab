@@ -127,7 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lifetime: 1
-  layerNumber: 0
+  layerNumber: 9
+  degats: 1
 --- !u!135 &5105051847740717020
 SphereCollider:
   m_ObjectHideFlags: 0

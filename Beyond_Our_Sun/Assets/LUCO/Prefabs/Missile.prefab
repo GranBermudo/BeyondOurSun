@@ -54,6 +54,8 @@ MonoBehaviour:
   explosion: {fileID: 1723245884849477151, guid: 61954c239be04c54cb2d749af61019c6,
     type: 3}
   trackingDelay: 0
+  degats: 1
+  layerNumber: 9
 --- !u!54 &7633186411886444866
 Rigidbody:
   m_ObjectHideFlags: 0
