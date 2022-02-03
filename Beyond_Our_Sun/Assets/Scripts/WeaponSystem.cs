@@ -56,7 +56,7 @@ public class WeaponSystem : MonoBehaviour
         }
 
         //add cursor to locked ship and keep it facing Player
-        if (LockedShip != null)                                   //!=   si c'est inégal ou Compare si deux objets font référence à un objet différent.  comprend pas le null 
+        if (LockedShip != null)
         {
             lockedWidget.transform.LookAt(transform);               //ici ça fait en sorte que l'indicateur de verrouillage soit toujours face au joueur
             //GizmoLock.transform.LookAt(LockedShip.transform);                 //le gizmo lock c'est un indicateur dans le cockpit pour indiquer si la cible est derrière nous
@@ -71,7 +71,7 @@ public class WeaponSystem : MonoBehaviour
         }
     }
 
-    public void shootAutocannon(GameObject bullet, Transform firepoint, float BulletSpeed)
+    void shootAutocannon(GameObject bullet, Transform firepoint, float BulletSpeed)
     {
         Vector3 shootDir = firepoint.transform.forward;                     //pour tirer en face
         shootDir.x += Random.Range(-spreadFactor, spreadFactor);            //mais on ajoute un petit spread pour pas tirer tout droit non plus

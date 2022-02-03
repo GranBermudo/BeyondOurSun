@@ -17,10 +17,8 @@ public class PropellerShipBehaviour : MonoBehaviour
     public float accelerationFactor;    //a quel point le vaisseau accelere ou decelere vite
     public float decelerationFactor;
     public float RotationSpeed;
-    
 
     private Vector2 CurrentSpeedStraffing = Vector2.zero;
-    //public float sautTP = Vector3.zero;
 
 
     void Start()
@@ -30,7 +28,7 @@ public class PropellerShipBehaviour : MonoBehaviour
 
     void Update()
     {
-        // Debug.Log(Input.GetAxis("LT"));
+        Debug.Log(Input.GetAxis("LT"));
         //Increase or decrease ship speed
         if (Input.GetAxis("LT") > 0 && Speed < maxSpeed)
         {
@@ -50,14 +48,6 @@ public class PropellerShipBehaviour : MonoBehaviour
                 Speed = 0;                                              //on remet la vitesse a zéro si elle est sous une certaine valeur et qu'on ne touche pas aux contrôles
             }
         }
-
-       // if(Input.GetButton("Xbutton"))
-		{
-           // sautTP.z;
-
-        }
-
-
 
 
 
