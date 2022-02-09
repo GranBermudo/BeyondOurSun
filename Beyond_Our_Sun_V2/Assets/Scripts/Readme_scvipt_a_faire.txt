@@ -19,3 +19,10 @@ j'affiche dans le text la valeur de la du case du tableau du correspondante (a i
 Si indexDialogue >= a la taille du tableau => fin du dialogue
 
 Pour avoir les images des personnes remplacer les string par des structures (composé de string avec reference a l'image afficher et possible un deuxieme string avec le nom par exemple)
+
+
+Unstash l'image des controlle
+
+Changer de camera
+
+Changer la depth de la camera et appliquer des conditions pour les inputs pour pas tout casser (apparement la depth de la camera est juste pour le rendu donc bizarre)
