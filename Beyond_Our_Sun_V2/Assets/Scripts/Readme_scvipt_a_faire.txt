@@ -1,8 +1,6 @@
 Scripts necessaire
 
-Retourne la caméra ou la switch pour voir derrière avec un bouton
 
-? changer de vu de tps a fps ?
 
 
 Script lors des debuts de mission qui met en contexte ce qu'on va faire avec les ojectif met le jeu en pose 
@@ -23,6 +21,23 @@ Pour avoir les images des personnes remplacer les string par des structures (com
 
 Unstash l'image des controlle
 
-Changer de camera
+regler le lock target qui disparait pas en meme temps que la cible whallah
 
-Changer la depth de la camera et appliquer des conditions pour les inputs pour pas tout casser (apparement la depth de la camera est juste pour le rendu donc bizarre)
+Quand on rotate plus au bout de qq seconde le vaisseau se remet droit ?
+
+Mettre les gauche pour se décaler a gauche et a droite sur le left stick
+
+Mettre les straf sur les gache 
+
+bouger la caméra sur le stick droit
+
+
+PropellerShipBehaviour Ligne 67 a 90
+
+Mettre les right stick sur LB ET RB
+
+
+
+Enlever le straff
+
+Mettre la rotation horizontal sur le stick droit

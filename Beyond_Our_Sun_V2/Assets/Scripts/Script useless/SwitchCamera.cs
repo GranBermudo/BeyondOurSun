@@ -54,12 +54,12 @@ public class SwitchCamera : MonoBehaviour
         {
             buttonpress = true;
             Debug.Log("buttonXpress");
-           
+
             CameraRetroviseur.SetActive(true);
             MainCameraTps.SetActive(false);
             //currentCam = 0; //augmenter la valeur de la cam a 1 ou appeler le game object camera
         }
-        // else (Input.GetButtonDown("Xbutton"))
+        //else (Input.GetButtonDown("Xbutton"))
 
         {
             buttonpress = false;
@@ -75,9 +75,10 @@ public class SwitchCamera : MonoBehaviour
 
             CameraFps.SetActive(true);
             MainCameraTps.SetActive(false);
-           // currentCam = 2;
+            // currentCam = 2;
         }
-        //else (Input.GetButtonDown("RightSitckButton"))      //pourquoi il demande un ; ici ?
+
+        //else (Input.GetButtonDown("RightSitckButton"))    //pourquoi il demande un ; ici ?
 
 
         {

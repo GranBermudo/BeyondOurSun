@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -58,6 +58,8 @@ public class Teleportation : MonoBehaviour
 		{
             saut transform.position
                 _velocity += Vector3.Scale(transform.forward, DashForce * new Vector3((Mathf.Log(1f / (Time.deltaTime * DragForce.x + 1)) / -Time.deltaTime), 0, (Mathf.Log(1f / (Time.deltaTime * DragForce.z + 1)) / -Time.deltaTime)));
-        }*/
+        }
+
     
 }
+*/
