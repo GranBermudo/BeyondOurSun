@@ -42,6 +42,9 @@ public class ShipBehaviour : MonoBehaviour
     public GameObject lockedWidget;
     public GameObject GizmoLock;
 
+    public float smooth;
+    public float tiltAngle;
+
     [Header ("if the player use a controller or not")]
     public bool controller = false;
 
@@ -111,6 +114,20 @@ public class ShipBehaviour : MonoBehaviour
             //cooldownMissile
             shootMissile(Missile, MissileLaucherTransform);
         }
+
+        {
+            // Smoothly tilts a transform towards a target rotation.
+           float tiltAroundZ = Input.GetAxis("Horizontal") * tiltAngle;
+           float tiltAroundX = Input.GetAxis("Vertical") * tiltAngle;
+
+            // Rotate the cube by converting the angles into a quaternion.
+            Quaternion target = Quaternion.Euler(tiltAroundX, 0, tiltAroundZ);
+
+            // Dampen towards the target rotation
+            transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
+        }
+
+
     }
 
     private void FixedUpdate()

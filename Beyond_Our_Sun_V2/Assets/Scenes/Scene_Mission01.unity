@@ -3931,6 +3931,21 @@ MonoBehaviour:
   accelerationFactor: 60
   decelerationFactor: 60
   RotationSpeed: 15
+  eulerAngX: 0
+  eulerAngY: 0
+  eulerAngZ: 0
+  ship: {fileID: 1727651422}
+  smooth: 0.84
+  isButtonLB: 0
+  isButtonRB: 0
+  isLeftStickHorizontal: 0
+  isLeftStickVertical: 0
+  rotationX: 0
+  playerTransfrom: {fileID: 1727651424}
+  transformZero: {fileID: 1862706923}
+  rotationXPlayer: 0
+  rotationYPlayer: 0
+  rotationZPlayer: 0
 --- !u!4 &1727651424
 Transform:
   m_ObjectHideFlags: 0
@@ -4155,6 +4170,36 @@ Transform:
   - {fileID: 2079717619}
   m_Father: {fileID: 0}
   m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1862706922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1862706923}
+  m_Layer: 0
+  m_Name: transform Zero
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1862706923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862706922}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 701.612, y: -139.00555, z: 848.32056}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1879146920
 GameObject:
