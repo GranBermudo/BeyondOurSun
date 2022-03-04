@@ -21,7 +21,7 @@ public class PropellerShipBehaviour : MonoBehaviour
     
     
 
-    [Header("Reset Rotation vaisseau")]
+   /* [Header("Reset Rotation vaisseau")]
     [SerializeField]
     float eulerAngX;
     [SerializeField]
@@ -34,19 +34,19 @@ public class PropellerShipBehaviour : MonoBehaviour
     public bool isButtonRB;
     public bool isLeftStickHorizontal;
     public bool isLeftStickVertical;
-    public float rotationX;
+    public float rotationX;*/
+
+    private Vector2 CurrentSpeedStraffing = Vector2.zero;
 
 
-
-
-    Vector3 currentEulerAngles;
+    /*Vector3 currentEulerAngles;
     public Transform playerTransfrom;
     public Transform transformZero;
-    private Vector2 CurrentSpeedStraffing = Vector2.zero;
+    
     //public float sautTP = Vector3.zero;
     public float rotationXPlayer;
     public float rotationYPlayer;
-    public float rotationZPlayer;
+    public float rotationZPlayer;*/
 
     void Start()
     {
@@ -56,9 +56,9 @@ public class PropellerShipBehaviour : MonoBehaviour
 
     void Update()
     {
-        rotationXPlayer = playerTransfrom.rotation.x;
-        rotationYPlayer = playerTransfrom.rotation.y;
-        rotationZPlayer = playerTransfrom.rotation.z;
+        //rotationXPlayer = playerTransfrom.rotation.x;
+        //rotationYPlayer = playerTransfrom.rotation.y;
+        //rotationZPlayer = playerTransfrom.rotation.z;
 
 
         // Debug.Log(Input.GetAxis("LT"));
@@ -83,7 +83,7 @@ public class PropellerShipBehaviour : MonoBehaviour
         }
         /////////////////////Remettre la rotation X Y Z a 0 du player après avoir finis de toucher aux input çi dessous////////////
         {
-            eulerAngX = transform.localEulerAngles.x;
+            /*eulerAngX = transform.localEulerAngles.x;
             eulerAngY = transform.localEulerAngles.y;
             eulerAngZ = transform.localEulerAngles.z;
 
@@ -98,7 +98,7 @@ public class PropellerShipBehaviour : MonoBehaviour
 
 
 
-            }
+            }*/
             Input.GetButton("LB");
             Input.GetButton("RB");
             Input.GetAxis("LeftStickHorizontal");
@@ -218,19 +218,19 @@ public class PropellerShipBehaviour : MonoBehaviour
         float Yrot = 0;
         if (Input.GetButton("LB"))
         {
-            isButtonLB = true;
+            //isButtonLB = true;
             Yrot = -1;
         }
         else if (Input.GetButton("RB"))                                             //ici ça fait tourner le vaisseau
         {
-            isButtonRB = true;
+           // isButtonRB = true;
             Yrot = 1;
         }
         else if (Input.GetButton("LB") && Input.GetButton("RB"))
         {
             Yrot = 0;
-            isButtonLB = true;
-            isButtonRB = true;
+            //isButtonLB = true;
+            //isButtonRB = true;
         }
 
         Vector3 rotate = new Vector3(-Input.GetAxis("LeftStickVertical"), Yrot, -Input.GetAxis("LeftStickHorizontal"));

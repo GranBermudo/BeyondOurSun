@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8688256}
   - component: {fileID: 8688257}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CM Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 192223510}
   - component: {fileID: 192223511}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trail03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -603,7 +603,7 @@ RectTransform:
   - {fileID: 141645937}
   - {fileID: 479169259}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -620,7 +620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 287447716}
   - component: {fileID: 287447717}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -815,6 +815,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 008da5f568c831d419d99c7c1035d6d6, type: 3}
+--- !u!1 &429363077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5330958834024803916, guid: 008da5f568c831d419d99c7c1035d6d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 4240899664322680400}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &429363081
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429363077}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 33.112637, z: 30}
+  m_Center: {x: 0.00000047683716, y: 16.556318, z: 0.00000047683716}
 --- !u!1 &479169258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,7 +1169,7 @@ GameObject:
   - component: {fileID: 628498648}
   - component: {fileID: 628498646}
   - component: {fileID: 628498647}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1332,7 +1351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 668850201}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: lanceMissile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1702,7 +1721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 811368173}
   - component: {fileID: 811368174}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trail04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1846,7 +1865,7 @@ GameObject:
   - component: {fileID: 877969183}
   - component: {fileID: 877969184}
   - component: {fileID: 877969185}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1925,7 +1944,7 @@ MeshCollider:
   m_GameObject: {fileID: 885887201}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -1946,7 +1965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 932030975}
   - component: {fileID: 932030976}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trail02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2176,7 +2195,7 @@ GameObject:
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
   - component: {fileID: 963194230}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MainCameraTps
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -2487,7 +2506,7 @@ PrefabInstance:
     - target: {fileID: 6829985655256809751, guid: 8dae953923a511844afe93b9fdceb6cb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6829985655256809751, guid: 8dae953923a511844afe93b9fdceb6cb,
         type: 3}
@@ -2958,7 +2977,7 @@ GameObject:
   - component: {fileID: 1269226572}
   - component: {fileID: 1269226574}
   - component: {fileID: 1269226573}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CameraFps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3129,7 +3148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1353400415}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Blaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3161,7 +3180,7 @@ GameObject:
   - component: {fileID: 1371786803}
   - component: {fileID: 1371786805}
   - component: {fileID: 1371786804}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CameraRetroviseur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3585,7 +3604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1586899464}
   - component: {fileID: 1586899465}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trail01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3757,7 +3776,7 @@ PrefabInstance:
     - target: {fileID: 6829985655256809751, guid: 8dae953923a511844afe93b9fdceb6cb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6829985655256809751, guid: 8dae953923a511844afe93b9fdceb6cb,
         type: 3}
@@ -3901,8 +3920,8 @@ GameObject:
   - component: {fileID: 1727651425}
   - component: {fileID: 1727651423}
   - component: {fileID: 1727651427}
-  - component: {fileID: 1727651430}
-  m_Layer: 0
+  - component: {fileID: 1727651428}
+  m_Layer: 11
   m_Name: PlayerShip
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3931,21 +3950,6 @@ MonoBehaviour:
   accelerationFactor: 60
   decelerationFactor: 60
   RotationSpeed: 15
-  eulerAngX: 0
-  eulerAngY: 0
-  eulerAngZ: 0
-  ship: {fileID: 1727651422}
-  smooth: 0.84
-  isButtonLB: 0
-  isButtonRB: 0
-  isLeftStickHorizontal: 0
-  isLeftStickVertical: 0
-  rotationX: 0
-  playerTransfrom: {fileID: 1727651424}
-  transformZero: {fileID: 1862706923}
-  rotationXPlayer: 0
-  rotationYPlayer: 0
-  rotationZPlayer: 0
 --- !u!4 &1727651424
 Transform:
   m_ObjectHideFlags: 0
@@ -3967,7 +3971,7 @@ Transform:
   - {fileID: 192223510}
   - {fileID: 811368173}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1727651425
 SphereCollider:
@@ -4025,7 +4029,7 @@ MonoBehaviour:
   LockedShip: {fileID: 0}
   lockedWidget: {fileID: 2010701634}
   GizmoLock: {fileID: 0}
---- !u!114 &1727651430
+--- !u!114 &1727651428
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4034,24 +4038,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1727651422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ec24117759d8174aba90e796e6c928f, type: 3}
+  m_Script: {fileID: 11500000, guid: 867d71bacd0a1af46bad46534ecbc454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PV: 5
-  eventOnDeath:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1727651422}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  playerHealth: 0
+  hearts: []
 --- !u!4 &1728597430 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6494849391770524136, guid: 2e039aa39fd4b9847a440a1e67879262,
@@ -4068,7 +4059,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1744463044}
   - component: {fileID: 1744463045}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4277,7 +4268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1881666565}
   - component: {fileID: 1881666566}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CM Fps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4444,8 +4435,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceDeDetection: 50
   vitesse: 10
-  Blaster: {fileID: 1353400415}
   shootJoeur: 0
+  Avatar:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastHit: 0
+  Ship: {fileID: 0}
+  Blaster: {fileID: 1353400415}
   firepoint: {fileID: 693013442}
   bullet: {fileID: 4597178850940068537, guid: ccf664abd54b312429e3205838df9cb4, type: 3}
   BulletSpeed: 200
@@ -4467,7 +4463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1959493157}
   - component: {fileID: 1959493158}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CM Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4533,7 +4529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2010701635}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MissileLockingWidget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4579,10 +4575,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dbcb932c489e7247baf8a56fbe7d97f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceDeDetection: 50
-  vitesse: 10
-  Blaster: {fileID: 1353400415}
+  distanceDeDetection: 100
+  vitesse: 20
   shootJoeur: 0
+  Avatar:
+    serializedVersion: 2
+    m_Bits: 2048
+  raycastHit: 0
+  Ship: {fileID: 0}
+  Blaster: {fileID: 1353400415}
   firepoint: {fileID: 693013442}
   bullet: {fileID: 4597178850940068537, guid: ccf664abd54b312429e3205838df9cb4, type: 3}
   BulletSpeed: 200
@@ -4636,6 +4637,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2050265621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 48691a8f2adf87644abb4d5cf3a8ad7b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1540779472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2050265625
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050265621}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12, y: 20, z: 20.000002}
+  m_Center: {x: -0.00000008940697, y: 9.999996, z: 0.0000009536743}
 --- !u!1001 &2059941482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4827,7 +4847,7 @@ GameObject:
   - component: {fileID: 2105852192}
   - component: {fileID: 2105852195}
   - component: {fileID: 2105852194}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TriangleLock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4922,7 +4942,7 @@ GameObject:
   - component: {fileID: 4522010038802587041}
   - component: {fileID: 2758436655121929577}
   - component: {fileID: 5081918857533398474}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Guns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5168,7 +5188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3721879798631858903}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: test_propellerPod 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5352,7 +5372,7 @@ PrefabInstance:
     - target: {fileID: 6829985655256809751, guid: 8dae953923a511844afe93b9fdceb6cb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6829985655256809751, guid: 8dae953923a511844afe93b9fdceb6cb,
         type: 3}
@@ -5417,7 +5437,7 @@ GameObject:
   - component: {fileID: 3699767664932973640}
   - component: {fileID: 1770395291237690910}
   - component: {fileID: 7661636829194759222}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Propeller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5482,7 +5502,7 @@ GameObject:
   - component: {fileID: 2373783369689000276}
   - component: {fileID: 1936792710265950347}
   - component: {fileID: 951285660893826291}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: propellerRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5500,7 +5520,7 @@ GameObject:
   - component: {fileID: 2115582770361237103}
   - component: {fileID: 7208634396070874930}
   - component: {fileID: 9065734498045691556}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Guides
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5587,7 +5607,7 @@ GameObject:
   - component: {fileID: 155089483585245790}
   - component: {fileID: 8961839202852562176}
   - component: {fileID: 616031274498836537}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cockpit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
