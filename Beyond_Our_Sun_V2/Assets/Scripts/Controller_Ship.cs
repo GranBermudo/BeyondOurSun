@@ -6,13 +6,20 @@ public class Controller_Ship : MonoBehaviour
 {
 
     public float baseSpeed;
- 
     Rigidbody shipRigidbody;
-    public float RotationSpeed;
+    ///public CharacterController controller; Trouver comment le replacer  https://www.youtube.com/watch?v=4HpC--2iowE
+
     public float distanceToMove;
     
+
+    public float yRot;
+    public float RotationSpeed;
+
+    public float turnSmoothTime = 0.1f;
+    float turnSmoothVelocity;
     
-    
+
+
 
 
     // Start is called before the first frame update
@@ -44,6 +51,34 @@ public class Controller_Ship : MonoBehaviour
         {
             baseSpeed = 30f;
         }
+
+
+
+        Input.GetAxis("LeftStickHorizontal");
+        Input.GetAxis("LeftStickVertical");
+
+        yRot += Time.deltaTime * RotationSpeed;
+
+
+        float vertical = Input.GetAxis("LeftStickkVertical");
+        float horizontal = Input.GetAxis("LeftStickHorizontal");
+        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+        if ( direction.magnitude >= 0.1f)
+		{
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+            //controller.Move(direction * baseSpeed * Time.deltaTime); TROUVER COMMENT LE REMPLACER
+		}
+
+        //transform.rotation = Quaternion.Euler(0, yRot, 0);
+
+
+
+
+
     }
     private void FixedUpdate()
 	{
