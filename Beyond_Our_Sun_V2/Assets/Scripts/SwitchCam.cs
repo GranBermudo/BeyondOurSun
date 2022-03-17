@@ -22,7 +22,7 @@ public class SwitchCam : MonoBehaviour
     void Update()
     {
 ///////////////////////////////////////////////// APPUYER SUR LE BOUTON X ET CHANGERE LA PRIORITE DES CAMERAS ////////////////////////////////////////
-        if (Input.GetButton("Xbutton"))
+        if (Input.GetButton("RightStickButton"))
         {
             IsBackmode = true;
             FrontCam.m_Priority = 7;
@@ -35,7 +35,7 @@ public class SwitchCam : MonoBehaviour
         }
        
         ///////////////////////////////////////////////// CONDITION POUR REGARDER LE RETRO EN FPS MODE //////////////////////////////////////////
-        if (IsFpsMode == true && Input.GetButton("Xbutton"))
+        if (IsFpsMode == true && Input.GetButton("RightStickButton"))
 		{
 
             IsBackmode = true;
@@ -51,7 +51,7 @@ public class SwitchCam : MonoBehaviour
 
         /////////////////////////////////////////////// FLIP FLOP RIGHT STICK BUTUTON //////////////////////////////////////////////////////////////////////////////////////
 
-        if (Input.GetButtonDown("RightStickButton")) // SI t'appuie sur le bouton 
+        if (Input.GetButtonDown("LeftStickButton")) // SI t'appuie sur le bouton 
         {
             IsFpsMode = !IsFpsMode;   // la condition isfpsmode s'inverse. Du coup ça veut dire que si c'est true , bah ca devient false et si c'est false ça deviant true 
             if(IsFpsMode == true)           // donc si c'est true la con de ta mere  ça active la camera

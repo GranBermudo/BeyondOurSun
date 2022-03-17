@@ -30,20 +30,24 @@ public class WeaponSystem : MonoBehaviour
     private void Start()
     {
         PSBscript = GetComponent<PropellerShipBehaviour>();     //reference au script du joueur pour les transform et les valeur de vitesse
+        //PSBscript = GetComponent<Controller_Ship>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Input.GetAxis("LT") );
+        //Debug.Log(Input.GetAxisRaw("LT"));
         //shooting with autocannon
-        if (Input.GetButton("Abutton") && Time.time >= nextTimeToFire)      //ça tire tout les x temps qui est défini a la ligne juste en dessous, ça fonctionne
+        if (Input.GetAxis("LT" ) >0 && Time.time >= nextTimeToFire)      //ça tire tout les x temps qui est défini a la ligne juste en dessous, ça fonctionne
         {
-            nextTimeToFire = Time.time + 1f / fireRate;
+            nextTimeToFire = Time.time + 1f / (fireRate * Input.GetAxis("LT")) ;
             shootAutocannon(Bullet, Blaster, BulletSpeed);
+            Debug.Log("jetire");
         }
 
         //shooting a missile
-        if (Input.GetButtonDown("Bbutton"))
+        if (Input.GetAxis("RT") >0)
         {
             //cooldownMissile
             shootMissile(Missile, MissileLaucherTransform);
