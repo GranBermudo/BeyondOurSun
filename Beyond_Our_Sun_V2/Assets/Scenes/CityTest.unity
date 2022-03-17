@@ -641,6 +641,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hotel 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8832037986824536280, guid: b56dea231f6fecf42a6fa6137fdd1855,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e02518ea9f84dd4080aa7fb49704da4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b56dea231f6fecf42a6fa6137fdd1855, type: 3}
 --- !u!1001 &1892743134

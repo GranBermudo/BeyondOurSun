@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BrickWallMat
-  m_Shader: {fileID: 4800000, guid: b77f7f1756d437a42892c950058c83dc, type: 3}
-  m_ShaderKeywords: _TOGGLESWITCH0_ON
+  m_Name: WindowPillar
+  m_Shader: {fileID: 4800000, guid: 61e40e11b1b724a4c80963787d5327ff, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -19,12 +19,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _AmbientOcclusion:
-        m_Texture: {fileID: 2800000, guid: 55252deed88bcbc4abf6943cf244ab7c, type: 3}
+    - _AORM:
+        m_Texture: {fileID: 2800000, guid: 38de0606761e4934796aeb63d1a6e191, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColor:
-        m_Texture: {fileID: 2800000, guid: 6178019c341908a4ba1ba92b6802fa24, type: 3}
+        m_Texture: {fileID: 2800000, guid: f472ecea4fa47864784a377689b2d52f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -51,16 +51,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Metallic:
-        m_Texture: {fileID: 2800000, guid: 44e65e7ae8cedcd44807d0f82174ebd1, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
-        m_Texture: {fileID: 2800000, guid: f165fd5da659fb1479a5c686eed29c26, type: 3}
+        m_Texture: {fileID: 2800000, guid: baa7cae5ead50604398f7bb4c84bc852, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -69,10 +65,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Roughness:
-        m_Texture: {fileID: 2800000, guid: eb039c9bc1d7fed4095cb9bc2c59935e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -84,9 +76,11 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Float0: 0.91
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _Keyword0: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -94,12 +88,10 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _ToggleSwitch0: 1
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color0: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _TextureColor: {r: 0.49056602, g: 0.4195588, b: 0.27999285, a: 1}
-    - _Tiling: {r: 10, g: 10, b: 0, a: 0}
