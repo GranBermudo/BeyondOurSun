@@ -27,19 +27,22 @@ public class EnnemisIA : MonoBehaviour
     public float spreadFactor;
     public float fireTime;
 
-   
+    [Header("Player")]
+    public float dammage;
 
-    private PropellerShipBehaviour PSBscript;
-    private SystemePlayerHealth hpPlayer;
-    
+
+
+    //private PropellerShipBehaviour PSBscript;
+    //private SystemePlayerHealth hpPlayer;
+
 
     // Start is called before the first frame update
 
     private void Start()
     {
-        PSBscript = GetComponent<PropellerShipBehaviour>();     //reference au script du joueur pour les transform et les valeur de vitesse
-        fireTime = 1f;
-        hpPlayer = GetComponent<SystemePlayerHealth>();      //Reference au script des pv du joueur
+        //PSBscript = GetComponent<PropellerShipBehaviour>();     //reference au script du joueur pour les transform et les valeur de vitesse
+       // fireTime = 1f;
+       // hpPlayer = GetComponent<SystemePlayerHealth>();      //Reference au script des pv du joueur
 
 
     }
@@ -82,8 +85,15 @@ public class EnnemisIA : MonoBehaviour
             // if (target != null)
             //{
             ////    target.TakeDamage(damage);
+            if (hit.collider.GetComponent<ViePlayer>() != null)
+			{
+                hit.collider.GetComponent<ViePlayer>().TakeDammage(dammage);
+
+            }
         
         }
+
+        
 
         //if (raycastHit == true && hit.transform.gameObject == Ship) 
 		

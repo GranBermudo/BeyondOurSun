@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour
+public class ViePlayer : MonoBehaviour
 {
     //public float PV;
     //public UnityEvent eventOnDeath;
 
-    public int playerHealth;
+    public float playerHealth;
     [SerializeField] private Image[] hearts;
+	
 
 	/* public void TakeDammage(float dammage)
 
@@ -49,6 +50,13 @@ public class PlayerHealth : MonoBehaviour
             }
 		}
 	}
+	
+	public void TakeDammage (float dammage)
+	{
+		playerHealth -= dammage;
+		UpdateHealth();
+	}
+
 
 
 }
