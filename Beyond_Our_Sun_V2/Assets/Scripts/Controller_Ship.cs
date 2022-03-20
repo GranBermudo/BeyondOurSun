@@ -41,22 +41,19 @@ public class Controller_Ship : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //float x = Input.GetAxis("LeftStickHorizontal");
-        //float z = Input.GetAxis("RightStickVertical");
-        //Vector3 movement = new Vector3(x, 0, z);
-        //transform.Translate(movement * speed * Time.deltaTime);
+       
 
        if(isDashing == false) 
       { 
 
         //Debug.Log(Input.GetAxis("RightStickVertical"));
-            if (Input.GetAxis("RightStickVertical") > 0.1 )                     //ici toute une partie sur le straffing qui fonctionnait pas comme je voulait mais 
-            {                                                                                                        //ça serai bien de l'implémenter, voir avec Bruno
+            if (Input.GetAxis("RightStickVertical") > 0.1 )                   
+            {                                                                                                        
                 baseSpeed = 60f;
             }
 
-            if (Input.GetAxis("RightStickVertical") > 0.75 )                     //ici toute une partie sur le straffing qui fonctionnait pas comme je voulait mais 
-            {                                                                                                        //ça serai bien de l'implémenter, voir avec Bruno
+            if (Input.GetAxis("RightStickVertical") > 0.75 )                    
+            {                                                                                                        
                 baseSpeed = 80f;
             }
         
@@ -124,13 +121,7 @@ public class Controller_Ship : MonoBehaviour
             }
 
         }
-       
-
-        //transform.rotation = Quaternion.Euler(0, yRot, 0);
-
-
-
-
+      
 
     }
     private void FixedUpdate()
@@ -160,23 +151,6 @@ public class Controller_Ship : MonoBehaviour
             transform.Translate(acceleration);
 
         }
-
-
-
-
-        //float Yrot = 0;
-
-        /* if (distanceToMove > 0)
-         {
-             transform.position = new Vector3(transform.position.x, transform.position.y + distanceToMove, transform.position.z);
-
-         }*/
-
-        //Vector3 rotate = new Vector3(0, Yrot, -Input.GetAxis("LeftStickHorizontal"));
-        // Vector3 rotate = new Vector3(0, -Input.GetAxis("LeftStickVertical"),0 );
-        //move = rotate.normalized * Time.deltaTime * (RotationSpeed * 10);
-        // shipRigidbody.AddRelativeTorque(move);     //la rotation est physiquée
-
 
     }
 }

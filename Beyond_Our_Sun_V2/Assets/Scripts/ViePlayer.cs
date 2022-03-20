@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class ViePlayer : MonoBehaviour
 {
@@ -27,12 +29,17 @@ public class ViePlayer : MonoBehaviour
 	private void Start()
 	{
 		UpdateHealth();
+		
 	}
 
 	public void UpdateHealth()
 	{
 		if (playerHealth <= 0)
 		{
+			Time.timeScale = 0;
+			Destroy(this.gameObject);
+			//SceneManager.LoadScene("Scene_Mission01", LoadSceneMode.Additive);
+
 			//Restart the game
 			//Restart the player
 		}

@@ -32,34 +32,17 @@ public class EnnemisIA : MonoBehaviour
 
 
 
-    //private PropellerShipBehaviour PSBscript;
-    //private SystemePlayerHealth hpPlayer;
-
+   
 
     // Start is called before the first frame update
 
-    private void Start()
-    {
-        //PSBscript = GetComponent<PropellerShipBehaviour>();     //reference au script du joueur pour les transform et les valeur de vitesse
-       // fireTime = 1f;
-       // hpPlayer = GetComponent<SystemePlayerHealth>();      //Reference au script des pv du joueur
-
-
-    }
+ 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform; //chopper une ref a la liste des cibles, y a surement une alternative au FindGameobject a voir avec Bruno
     }
 
-   /* public void shootAutocannon(GameObject bullet, Transform firepoint, float BulletSpeed) // l'ennemis tire sur le joueur
-    {
-        Vector3 shootDir = firepoint.transform.forward;                     //pour tirer en face
-        shootDir.x += Random.Range(-spreadFactor, spreadFactor);            //mais on ajoute un petit spread pour pas tirer tout droit non plus
-        shootDir.y += Random.Range(-spreadFactor, spreadFactor);
-
-        var projectileObj = Instantiate(bullet, firepoint.position, Blaster.rotation) as GameObject;                            //faire apparaitre la balle
-        projectileObj.GetComponent<Rigidbody>().AddForce(shootDir * (BulletSpeed + PSBscript.Speed), ForceMode.Impulse);        //avec une vitesse initiale pour pas toucher notre vaisseau mais je pense 
-    }*/
+  
 
     
    
@@ -78,13 +61,7 @@ public class EnnemisIA : MonoBehaviour
             Debug.Log("Joueur touche");
             raycastHit = true;
 
-            //Target targ = GetComponent<Ship>();
-            //Target targ = hit.collider.GetComponent<Ship>();
-
-            // Target target = hit.transform.GetComponent<Target>();
-            // if (target != null)
-            //{
-            ////    target.TakeDamage(damage);
+          
             if (hit.collider.GetComponent<ViePlayer>() != null)
 			{
                 hit.collider.GetComponent<ViePlayer>().TakeDammage(dammage);
@@ -93,29 +70,7 @@ public class EnnemisIA : MonoBehaviour
         
         }
 
-        
-
-        //if (raycastHit == true && hit.transform.gameObject == Ship) 
-		
-            //Pv.hpPlayer
-           // Damage();
-        
-
-
-        /*void Damage()
-		{
-            // hpPlayer.playerHealth = hpPlayer.playerHealth - raycastHit;
-            hpPlayer.playerHealth = hpPlayer.playerHealth - raycastHit == true && hit.transform.gameObject == Ship;
-            hpPlayer.UpdateHealth();
-            gameObject.SetActive(false);*/
-
-        
-
-
-
-
-        //var projectileObj = Instantiate(bullet, firepoint.position, Blaster.rotation) as GameObject;                            //faire apparaitre la balle
-        //projectileObj.GetComponent<Rigidbody>().AddForce(shootDir * (BulletSpeed), ForceMode.Impulse);
+   
     }
      
    
@@ -144,14 +99,14 @@ public class EnnemisIA : MonoBehaviour
 
 		if (fireTime < 0)         //si fire time est egale a 0 ça va se remettre a 1 et ça reshoot que quand c'est a 1
 		{
-            fireTime = 1;
+            fireTime = 3;
 		}
 
         if (shootJoeur == true )        // en fait un cooldown en gros
 		{
             fireTime -= Time.deltaTime;
 
-            if (fireTime >= 0.9) 
+            if (fireTime >= 2 ) 
             {
                 shoot();
                 Debug.Log("jetire"); 

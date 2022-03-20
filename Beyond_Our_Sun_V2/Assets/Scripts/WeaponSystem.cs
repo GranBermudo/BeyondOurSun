@@ -5,18 +5,20 @@ using UnityEngine;
 public class WeaponSystem : MonoBehaviour
 {
     private PropellerShipBehaviour PSBscript;
+    private Controller_Ship ControlScript;
 
     [Header("Machineguns")]
     public Transform Blaster;
     public GameObject Bullet;
     public float BulletSpeed;
-    public float fireRate = 15f;
+    public float fireRate;
     public float spreadFactor;
     private float nextTimeToFire = 0f;
 
     [Header("Missiles")]
     public Transform MissileLaucherTransform;
     public GameObject Missile;
+    //public float Speed;
 
     [Header("Targeting")]
     public LayerMask ennemiLayer;
@@ -31,6 +33,7 @@ public class WeaponSystem : MonoBehaviour
     {
         PSBscript = GetComponent<PropellerShipBehaviour>();     //reference au script du joueur pour les transform et les valeur de vitesse
         //PSBscript = GetComponent<Controller_Ship>();
+        ControlScript = GetComponent<Controller_Ship>();
     }
 
     // Update is called once per frame
@@ -82,15 +85,15 @@ public class WeaponSystem : MonoBehaviour
         shootDir.y += Random.Range(-spreadFactor, spreadFactor);
 
         var projectileObj = Instantiate(bullet, firepoint.position, Blaster.rotation) as GameObject;                            //faire apparaitre la balle
-        projectileObj.GetComponent<Rigidbody>().AddForce(shootDir * (BulletSpeed + PSBscript.Speed), ForceMode.Impulse);        //avec une vitesse initiale pour pas toucher notre vaisseau mais je pense 
+        projectileObj.GetComponent<Rigidbody>().AddForce(shootDir * (BulletSpeed + ControlScript.baseSpeed), ForceMode.Impulse);        //avec une vitesse initiale pour pas toucher notre vaisseau mais je pense 
     }                                                                                                                           //plus que ce soit utile parce que j'ai touché aux collission entre layers
                                                                                                                                 //pour éviter ça
     void shootMissile(GameObject missile, Transform MissileLauncher)
     {
         var projectileObj = Instantiate(missile, MissileLauncher.position, MissileLauncher.rotation) as GameObject;             //voilà ici on fait pop un missile
-        if(PSBscript.Speed > 0)
+        if(ControlScript.baseSpeed > 0)
         {
-            projectileObj.GetComponent<Missile>().speed += PSBscript.Speed;     //pour pas qu'il aille moins vite que notre vaisseau on lui ajoute la vitesse du vaisseau
+            projectileObj.GetComponent<Missile>().speed += ControlScript.baseSpeed;     //pour pas qu'il aille moins vite que notre vaisseau on lui ajoute la vitesse du vaisseau
         }
         if (LockedShip != null)
         {
