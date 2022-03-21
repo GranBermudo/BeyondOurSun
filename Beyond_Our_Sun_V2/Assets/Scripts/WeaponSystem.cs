@@ -13,21 +13,25 @@ public class WeaponSystem : MonoBehaviour
     public float BulletSpeed;
     public float fireRate;
     public float spreadFactor;
-    private float nextTimeToFire = 0f;
+    private float nextTimeToFire;
 
     [Header("Missiles")]
     public Transform MissileLaucherTransform;
     public GameObject Missile;
+    public int nombreMissile;
     //public float Speed;
 
     [Header("Targeting")]
     public LayerMask ennemiLayer;
-    public float detectionRange = 50f;
+    public float detectionRange ;
     public List<GameObject> TargetsInSight = new List<GameObject>();    //la liste des cibles dispos, c'est le script AddToTargetList qui ajoute les cibles a la liste
     private int whereInList = 0;    //l'index qui indique sur quel membre de la liste on se situe
     public GameObject LockedShip;
     public GameObject lockedWidget;
     public GameObject GizmoLock;
+
+
+    //public ArrayList[] listMissile;     Compte le nombre de missile
 
     private void Start()
     {
@@ -86,10 +90,18 @@ public class WeaponSystem : MonoBehaviour
 
         var projectileObj = Instantiate(bullet, firepoint.position, Blaster.rotation) as GameObject;                            //faire apparaitre la balle
         projectileObj.GetComponent<Rigidbody>().AddForce(shootDir * (BulletSpeed + ControlScript.baseSpeed), ForceMode.Impulse);        //avec une vitesse initiale pour pas toucher notre vaisseau mais je pense 
+
+        /*if (shootAutocannon && bullet >= 20f)
+		{
+            DestroyObject(bullet);
+		}*/
+        
+    
     }                                                                                                                           //plus que ce soit utile parce que j'ai touché aux collission entre layers
                                                                                                                                 //pour éviter ça
     void shootMissile(GameObject missile, Transform MissileLauncher)
     {
+        
         var projectileObj = Instantiate(missile, MissileLauncher.position, MissileLauncher.rotation) as GameObject;             //voilà ici on fait pop un missile
         if(ControlScript.baseSpeed > 0)
         {
@@ -100,7 +112,10 @@ public class WeaponSystem : MonoBehaviour
             projectileObj.GetComponent<Missile>().target = LockedShip.transform;    //si on a une cible on l'indique au missile 
         }
         projectileObj.GetComponent<Missile>().initiateTrackingDelay();      //le missile suis la cible après un certain temps et ici on active le timer pour ça
+        
+        
     }
+
 
     void LockTarget()
     {
