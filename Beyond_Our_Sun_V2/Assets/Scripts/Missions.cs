@@ -11,7 +11,7 @@ public class Missions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        objectifText.text = "Abbatre " + ennemisAbbatus + "/" + totalEnnemis + " ennemis";
+        objectifText.text = "Abattre " + ennemisAbbatus + "/" + totalEnnemis + " ennemis";
     }
 
     // Update is called once per frame
@@ -20,9 +20,7 @@ public class Missions : MonoBehaviour
         ennemisAbbatus += 1;
 
 
-        objectifText.text = "Abbatre " + ennemisAbbatus + "/" + totalEnnemis + " ennemis";
-
-
+        objectifText.text = "Abattre " + ennemisAbbatus + "/" + totalEnnemis + " ennemis";
 
     }
 }
