@@ -18,7 +18,8 @@ public class WeaponSystem : MonoBehaviour
     [Header("Missiles")]
     public Transform MissileLaucherTransform;
     public GameObject Missile;
-    public int nombreMissile;
+    public float fireRateMissile;
+    public float nextTimeToLaunchMissile;
     //public float Speed;
 
     [Header("Targeting")]
@@ -54,10 +55,18 @@ public class WeaponSystem : MonoBehaviour
         }
 
         //shooting a missile
-        if (Input.GetAxis("RT") >0)
+        if (Input.GetAxis("RT") > 0 && Time.time >= nextTimeToLaunchMissile)
         {
             //cooldownMissile
+            //shootMissile(Missile, MissileLaucherTransform);
+            if (Input.GetAxis("RT") > 0 && Time.time > nextTimeToFire)        // en fait un cooldown en gros
+                nextTimeToLaunchMissile = Time.time + 1f / (fireRateMissile * Input.GetAxis("RT"));
             shootMissile(Missile, MissileLaucherTransform);
+            Debug.Log("jetiremissile");
+
+
+
+
         }
 
         //lock on an object from the target list

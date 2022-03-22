@@ -13,7 +13,10 @@ public class ViePlayer : MonoBehaviour
 
     public float playerHealth;
     [SerializeField] private Image[] hearts;
-	
+	public int Vie;
+	public GameObject DeadCanvas;
+	public GameObject LifeCanvas;
+
 
 	/* public void TakeDammage(float dammage)
 
@@ -30,6 +33,7 @@ public class ViePlayer : MonoBehaviour
 	{
 		UpdateHealth();
 		
+
 	}
 
 	public void UpdateHealth()
@@ -38,6 +42,12 @@ public class ViePlayer : MonoBehaviour
 		{
 			Time.timeScale = 0;
 			Destroy(this.gameObject);
+
+			
+			DeadCanvas.SetActive(true);
+			LifeCanvas.SetActive(false);
+			 
+			
 			//SceneManager.LoadScene("Scene_Mission01", LoadSceneMode.Additive);
 
 			//Restart the game
@@ -62,7 +72,16 @@ public class ViePlayer : MonoBehaviour
 	{
 		playerHealth -= dammage;
 		UpdateHealth();
+		Destroy(hearts[Vie].gameObject);
 	}
+
+	public void LoadScene(string sceneName)
+	{
+		SceneManager.LoadScene(sceneName);
+		
+	}
+
+	
 
 
 

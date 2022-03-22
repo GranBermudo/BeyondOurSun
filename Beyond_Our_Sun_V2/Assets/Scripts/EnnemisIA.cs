@@ -16,7 +16,7 @@ public class EnnemisIA : MonoBehaviour
     public LayerMask Avatar;
     //public GameObject pt;
     public bool raycastHit;
-    public GameObject Ship;
+    //public GameObject Ship;
 
 
     [Header("GUN")]
@@ -26,9 +26,14 @@ public class EnnemisIA : MonoBehaviour
     public float BulletSpeed;
     public float spreadFactor;
     public float fireTime;
+    public float fireRate;
+    public float nextTimeToFire;
+
 
     [Header("Player")]
     public float dammage;
+
+    
 
 
 
@@ -56,15 +61,23 @@ public class EnnemisIA : MonoBehaviour
         RaycastHit hit;
         // Does the ray intersect any objects excluding the player layer
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, Avatar))
+            Debug.DrawRay(transform.position, transform.forward * 100, Color.green); print("Hit");
         {
             //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
             Debug.Log("Joueur touche");
             raycastHit = true;
 
+            if (raycastHit == true)
+			{
+                nextTimeToFire = Time.time + fireRate;
+			}
+
           
             if (hit.collider.GetComponent<ViePlayer>() != null)
-			{
+                Debug.Log("Aie");
+            {
                 hit.collider.GetComponent<ViePlayer>().TakeDammage(dammage);
+                
 
             }
         
@@ -97,47 +110,20 @@ public class EnnemisIA : MonoBehaviour
 
 		}
 
-		if (fireTime < 0)         //si fire time est egale a 0 ça va se remettre a 1 et ça reshoot que quand c'est a 1
-		{
-            fireTime = 3;
-		}
+		
 
-        if (shootJoeur == true )        // en fait un cooldown en gros
+        if (shootJoeur == true && Time.time > nextTimeToFire)        // en fait un cooldown en gros
 		{
-            fireTime -= Time.deltaTime;
+            
+            fireRate = Time.time + fireRate;
 
-            if (fireTime >= 2 ) 
+            if (fireRate >= 1 ) // c'est ici qu'on regle le CD des ennemis
             {
                 shoot();
                 Debug.Log("jetire"); 
 
             }
 
-           // RaycastHit hit;
-           /* Ray ray = new Ray(transform.position, Vector3.forward);
-
-            int layer_mask = LayerMask.GetMask("Avatar");
-
-            if(Physics.Raycast(ray, out hit, Mathf.Infinity, layer_mask, QueryTriggerInteraction.Ignore))
-			{
-                print(hit.transform.name + "travers le rayon");
-                print("la distance est de" + hit.distance);
-                pt.transform.position = hit.point;
-			}*/
-
-
-            /*if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, Avatar))
-            {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-                Debug.Log("Did Hit");
-            }
-
-            {
-                Vector3 fwd = transform.TransformDirection(Vector3.forward);
-
-                if (Physics.Raycast(transform.position, fwd, 10))
-                    print("There is something in front of the object!");
-            }*/
 
         }
     }
