@@ -13,9 +13,16 @@ public class LevelLoader : MonoBehaviour
 	public Text ProgressText;
 	public bool isloadingScreenActive;
 	public bool MenuControllesActive;
-		
+	public Image Logo;
+	public bool LogoActive;
 
 
+	void Start()
+	{
+
+		Logo.enabled = true;
+		LogoActive = true;
+	}
 	public void LoadLevel(int sceneIndex)
 	{
 		//AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
@@ -50,14 +57,26 @@ public class LevelLoader : MonoBehaviour
 	void Update()
 	{
 		if (isloadingScreenActive == true)
+		{ 
 			BoutonMenuControlles.SetActive(false);
+			Logo.enabled = false;
+			LogoActive = false;
+		}
 		if (isloadingScreenActive == false)
+		{
 			BoutonMenuControlles.SetActive(true);
+		}
+		if (BoutonMenuControlles == true)
+		{
+			Logo.enabled = false;
+			LogoActive = false;
+			isloadingScreenActive = false;
+		}
+			
+			
+			
 
-		if (MenuControllesActive == true)
-			BoutonMenuControlles.SetActive(false);
-		if (MenuControllesActive == false)
-			BoutonMenuControlles.SetActive(true);
+		
 
 	}
 

@@ -61,7 +61,7 @@ public class EnnemisIA : MonoBehaviour
         RaycastHit hit;
         // Does the ray intersect any objects excluding the player layer
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, Avatar))
-            Debug.DrawRay(transform.position, transform.forward * 100, Color.green); print("Hit");
+            Debug.DrawRay(transform.position, transform.forward * 200, Color.green); print("Hit");
         {
             //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
             Debug.Log("Joueur touche");
@@ -117,7 +117,7 @@ public class EnnemisIA : MonoBehaviour
             
             fireRate = Time.time + fireRate;
 
-            if (fireRate >= 1 ) // c'est ici qu'on regle le CD des ennemis
+            if (fireRate >= 0 ) // c'est ici qu'on regle le CD des ennemis
             {
                 shoot();
                 Debug.Log("jetire"); 
