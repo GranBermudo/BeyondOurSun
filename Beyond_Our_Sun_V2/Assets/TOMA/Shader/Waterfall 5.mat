@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Waterfall 5
+  m_Shader: {fileID: 4800000, guid: c0383d69773d8434d8260bf35bbd6dd8, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Ocean_Normal:
+        m_Texture: {fileID: 2800000, guid: 47f04f6a09b14424493a48877e72d2db, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ocean_gray:
+        m_Texture: {fileID: 2800000, guid: fa66a26cdeb38f940814fb3a6736f626, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: 76e2e0a4e9134894db05c11e049dd8da, type: 3}
+        m_Scale: {x: 10, y: 10}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Angle: 0.43
+    - _DephDistance: 75.07
+    - _EdgeDetection: 0
+    - _EdgeIntensty: 0
+    - _Float0: 0.0455
+    - _Offset: 0
+    - _Opacity: 0.835
+    - _Scale: 4
+    - _Sclale_voronoi: 10
+    - _SpeedIntensity: 0.834
+    - _Tiling: 0.5
+    - _Wave: 0.116
+    - __dirty: 0
+    m_Colors:
+    - _Color0: {r: 0.074626215, g: 0.12542467, b: 0.4056604, a: 0}
+    - _Color1: {r: 0.3207547, g: 0.2950338, b: 0.2950338, a: 0}
+    - _Color2: {r: 0, g: 0.03971933, b: 0.6981132, a: 0}
+    - _DephColor: {r: 0, g: 0, b: 0, a: 0}
+    - _Dephcolor: {r: 0.01802242, g: 0.16787168, b: 0.4245283, a: 0}
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 0}
+    - _FoamSpeed: {r: 0, g: 0.09, b: 0, a: 0}
+    - _Offset: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Speed: {r: 0, g: -0.25, b: 0, a: 0}

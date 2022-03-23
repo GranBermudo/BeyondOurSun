@@ -37,19 +37,25 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Angle: 0.43
-    - _DephDistance: 16414
+    - _DephDistance: 51
+    - _EdgeDetection: 8.26
+    - _EdgeIntensty: 1.1
     - _Float0: 0.0455
     - _Offset: 0
     - _Opacity: 0.835
     - _Scale: 4
     - _Sclale_voronoi: 10
+    - _SpeedIntensity: 0.921
     - _Tiling: 0.5
     - _Wave: 0.116
     - __dirty: 0
     m_Colors:
     - _Color0: {r: 0.074626215, g: 0.12542467, b: 0.4056604, a: 0}
     - _Color1: {r: 0.3207547, g: 0.2950338, b: 0.2950338, a: 0}
+    - _Color2: {r: 0, g: 0.03971933, b: 0.6981132, a: 0}
     - _DephColor: {r: 0, g: 0, b: 0, a: 0}
-    - _Dephcolor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 0}
+    - _Dephcolor: {r: 0.01802242, g: 0.16787168, b: 0.4245283, a: 0}
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 0}
+    - _FoamSpeed: {r: 0, g: -0.05, b: 0, a: 0}
     - _Offset: {r: 0.5, g: 0.5, b: 0.5, a: 0}
     - _Speed: {r: 0, g: -0.25, b: 0, a: 0}
